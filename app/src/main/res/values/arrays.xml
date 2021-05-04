@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="acomodacoes">
+        <item></item>
+        <item>Apto standard</item>
+        <item>Apto com sacada</item>
+        <item>Chalé</item>
+    </string-array>
+    <string-array name="categoria_de_quartos">
+        <item></item>
+        <item>Quarto de casal modelo Europeu</item>
+        <item>Quarto de casal</item>
+        <item>Quarto de solteiro duplo</item>
+        <item>Quarto de solteiro triplo</item>
+    </string-array>
+</resources>

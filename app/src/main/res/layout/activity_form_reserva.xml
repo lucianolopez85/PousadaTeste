@@ -43,167 +43,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/edit_acomodacao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/edit_text_login_cadastro"
-        android:hint="Apto com Sacada"
-        android:inputType="none"
-        android:maxLines="1"
-        android:padding="20dp"
-        android:textColorHint="@color/azul_text"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_acomodacao" />
-
-    <EditText
-        android:id="@+id/edit_quarto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:textColorHint="@color/azul_text"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/edit_text_login_cadastro"
-        android:hint="Quarto de casal modelo Europeu"
-        android:inputType="none"
-        android:maxLines="1"
-        android:padding="20dp"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_quarto" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:text="Incluir café da manhã"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_chegada"
-        />
-
-    <TextView
-        android:id="@+id/txt_chegada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:text="Chegada"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_quarto" />
-
-    <EditText
-        android:id="@+id/edit_chegada"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/edit_text_login_cadastro"
-        android:hint="01/01/2021"
-        android:inputType="date"
-        android:maxLines="1"
-        android:textColorHint="@color/azul_text"
-        android:padding="20dp"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_chegada" />
-
-    <TextView
-        android:id="@+id/txt_acomodacao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:text="Acomodação"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_nome2" />
-
-    <TextView
-        android:id="@+id/txt_quarto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:text="Quarto"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_acomodacao" />
-
-    <TextView
-        android:id="@+id/txt_partida"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Partida"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/edit_partida"
-        app:layout_constraintTop_toBottomOf="@+id/edit_quarto" />
-
-    <EditText
-        android:id="@+id/edit_partida"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/edit_text_login_cadastro"
-        android:hint="10/01/2021"
-        android:inputType="date"
-        android:maxLines="1"
-        android:padding="20dp"
-        android:textColorHint="@color/azul_text"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_partida" />
-
-    <EditText
-        android:id="@+id/edit_nome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/edit_text_login_cadastro"
-        android:hint="Rodrigo Hilbert"
-        android:inputType="none"
-        android:textColorHint="@color/azul_text"
-        android:maxLines="1"
-        android:padding="20dp"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nome" />
-
-    <EditText
-        android:id="@+id/edit_nome2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/edit_text_login_cadastro"
-        android:hint="ro_hilbert_ta_de_mais@gmail.com"
-        android:inputType="none"
-        android:maxLines="1"
-        android:textColorHint="@color/azul_text"
-        android:padding="20dp"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_email" />
-
     <TextView
         android:id="@+id/txt_nome"
         android:layout_width="wrap_content"
@@ -214,6 +53,22 @@
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <EditText
+        android:id="@+id/edit_nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edit_text_login_cadastro"
+        android:hint="Nome"
+        android:inputType="none"
+        android:maxLines="1"
+        android:padding="20dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nome" />
 
     <TextView
         android:id="@+id/txt_email"
@@ -226,20 +81,185 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_nome" />
 
+    <EditText
+        android:id="@+id/edit_nome2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edit_text_login_cadastro"
+        android:hint="exemplo@mail.com"
+        android:inputType="none"
+        android:maxLines="1"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_email" />
+
+    <TextView
+        android:id="@+id/txt_acomodacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Acomodação"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nome2" />
+
+    <Spinner
+        android:id="@+id/edit_acomodacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edit_text_login_cadastro"
+        android:hint="Apto com Sacada"
+        android:inputType="none"
+        android:maxLines="1"
+        android:padding="20dp"
+        android:textColorHint="@color/azul_text"
+        android:entries="@array/acomodacoes"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_acomodacao" />
+
+    <TextView
+        android:id="@+id/txt_quarto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Quarto"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_acomodacao" />
+
+    <Spinner
+        android:id="@+id/edit_quarto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textColorHint="@color/azul_text"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edit_text_login_cadastro"
+        android:hint="Quarto de casal modelo Europeu"
+        android:inputType="none"
+        android:maxLines="1"
+        android:entries="@array/categoria_de_quartos"
+        android:padding="20dp"
+        android:textColor="@color/azul_text"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_quarto" />
+
+    <TextView
+        android:id="@+id/txt_chegada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Chegada"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_quarto" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_chegada"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/fundo_branco_transparente"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_chegada"
+        app:layout_constraintEnd_toEndOf="@+id/edit_chegada"
+        app:layout_constraintStart_toStartOf="@+id/edit_chegada"
+        app:layout_constraintTop_toTopOf="@+id/edit_chegada"
+        android:outlineProvider="none"
+        />
+
+
+    <TextView
+        android:id="@+id/edit_chegada"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/edit_text_login_cadastro"
+        android:hint="01/01/2021"
+        android:inputType="date"
+        android:maxLines="1"
+        android:padding="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_chegada" />
+
+    <TextView
+        android:id="@+id/txt_partida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Partida"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/edit_partida"
+        app:layout_constraintTop_toBottomOf="@+id/edit_quarto" />
+
+    <TextView
+        android:id="@+id/edit_partida"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edit_text_login_cadastro"
+        android:hint="10/01/2021"
+        android:inputType="date"
+        android:maxLines="1"
+        android:padding="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_partida" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Incluir café da manhã"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_chegada" />
+
     <Button
         android:id="@+id/btn_confir_pagar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/azul_text"
         android:text="Confirmar e pagar"
+        android:textAllCaps="false"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textAllCaps="false"
-        android:backgroundTint="@color/azul_text"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="+ R$ 20,00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/switch1"
+        app:layout_constraintTop_toBottomOf="@+id/edit_partida" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

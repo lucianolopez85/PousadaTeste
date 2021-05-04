@@ -39,7 +39,7 @@
                 android:layout_marginStart="55dp"
                 android:layout_marginTop="25dp"
                 android:fontFamily="sans-serif"
-                android:text="Escolha sua acomodação"
+                android:text="Pagamento"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </FrameLayout>

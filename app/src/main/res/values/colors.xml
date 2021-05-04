@@ -12,4 +12,5 @@
     <color name="fundo">#F3F3F3</color>
     <color name="fundo_transparente">#C1D8D8D8</color>
     <color name="fundo_branco_transparente">#00FFFFFF</color>
+    <color name="fundo_botao">#00FFFFFF</color>
 </resources>
