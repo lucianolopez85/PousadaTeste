@@ -1,4 +1,4 @@
-package com.example.pousadateste
+package com.example.pousadateste.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.pousadateste.Model
+import com.example.pousadateste.R
 
 class MyAdapter(
     var mCtx: Context,
@@ -23,7 +25,7 @@ class MyAdapter(
         val descriptionTextView:TextView = view.findViewById((R.id.description))
 
 
-        var mItem:Model = items[position]
+        var mItem: Model = items[position]
         imageView.setImageDrawable(mCtx.resources.getDrawable(mItem.img))
         titleTextView.text = mItem.title
         descriptionTextView.text = mItem.description

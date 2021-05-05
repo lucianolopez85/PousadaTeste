@@ -3,7 +3,6 @@ package com.example.pousadateste
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ListView
 import kotlinx.android.synthetic.main.activity_categoria_acomodacoes.*
 
 class CategoriaAcomodacoes : AppCompatActivity() {
@@ -12,7 +11,7 @@ class CategoriaAcomodacoes : AppCompatActivity() {
         setContentView(R.layout.activity_categoria_acomodacoes)
 
         categoria_standard.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, QuartoComSacada::class.java)
             startActivity(intent)
 
 

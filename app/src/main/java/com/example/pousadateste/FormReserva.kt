@@ -10,6 +10,7 @@ import android.widget.DatePicker
 import android.widget.ListView
 import androidx.annotation.RequiresApi
 import kotlinx.android.synthetic.main.activity_form_reserva.*
+import java.text.SimpleDateFormat
 import java.util.*
 
 class FormReserva : AppCompatActivity() {
@@ -21,10 +22,9 @@ class FormReserva : AppCompatActivity() {
         btn_confir_pagar.setOnClickListener {
             val intent = Intent(this, FormPagamento::class.java)
             startActivity(intent)
-
         }
 
-        val c = Calendar.getInstance()
+        val c= Calendar.getInstance()
         val ano = c.get(Calendar.YEAR)
         val mes = c.get(Calendar.MONTH)
         val dia = c.get(Calendar.DAY_OF_MONTH)
@@ -32,6 +32,12 @@ class FormReserva : AppCompatActivity() {
         btn_chegada.setOnClickListener {
             val click = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
                 edit_chegada.setText( "" + dayOfMonth + "/" + month + "/" + year)
+            }, ano, mes, dia)
+            click.show()
+        }
+        btn_partida.setOnClickListener {
+            val click = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+                edit_partida.setText( "" + dayOfMonth + "/" + month + "/" + year)
             }, ano, mes, dia)
             click.show()
         }
