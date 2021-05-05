@@ -16,7 +16,7 @@ class LayoutEntrada : AppCompatActivity() {
         }, 2000)
     }
     private fun AbrirTelaLogin(){
-        val intent = Intent(this, CategoriaAcomodacoes::class.java)
+        val intent = Intent(this, MenuPrincipal::class.java)
         startActivity(intent)
         finish()
     }

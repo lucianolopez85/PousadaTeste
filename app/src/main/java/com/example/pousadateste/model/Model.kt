@@ -5,6 +5,6 @@ class Model(
     val description: String,
     val img: Int,
 )
-class modelText(
-    val quarto:String
+class ModelImg(
+    val img: Int
 )

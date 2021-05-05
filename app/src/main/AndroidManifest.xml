@@ -9,11 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PousadaTeste">
-        <activity android:name=".MenuPrincipal"></activity>
-        <activity android:name=".QuartoComSacada" />
+        <activity android:name=".EventoSocial"></activity>
+        <activity android:name=".Lazer" />
         <activity android:name=".FormPagamento" />
         <activity android:name=".FormReserva" />
+        <activity android:name=".QuartoStandard" />
         <activity android:name=".CategoriaAcomodacoes" />
+        <activity android:name=".MenuPrincipal" />
         <activity android:name=".LayoutEntrada">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

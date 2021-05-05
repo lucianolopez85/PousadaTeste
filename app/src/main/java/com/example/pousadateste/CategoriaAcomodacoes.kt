@@ -11,7 +11,7 @@ class CategoriaAcomodacoes : AppCompatActivity() {
         setContentView(R.layout.activity_categoria_acomodacoes)
 
         categoria_standard.setOnClickListener {
-            val intent = Intent(this, QuartoComSacada::class.java)
+            val intent = Intent(this, QuartoStandard::class.java)
             startActivity(intent)
 
 
