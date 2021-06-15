@@ -5,12 +5,9 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.DatePicker
-import android.widget.ListView
+import android.widget.*
 import androidx.annotation.RequiresApi
 import kotlinx.android.synthetic.main.activity_form_reserva.*
-import java.text.SimpleDateFormat
 import java.util.*
 
 class FormReserva : AppCompatActivity() {
@@ -18,6 +15,21 @@ class FormReserva : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_form_reserva)
+
+        val quartoView: TextView = findViewById(R.id.form_tipo_de_quarto)
+        val valorUnitario: TextView = findViewById(R.id.valor_diaria_por_pessoa_form)
+//        val imageView: ImageView = findViewById(R.id.imageView)
+
+        val bundle: Bundle? = intent.extras
+        val quarto = bundle!!.getString("listaQuarto")
+        val valorPorPessoa = bundle.getString("listaValorPorPessoa")
+//        val imageId = bundle.getInt("listImageId")
+//        val detail = bundle.getString("listData")
+
+        quartoView.text = quarto
+        valorUnitario.text = valorPorPessoa
+//        detailView.text = detail
+//        imageView.setImageResource(imageId)
 
         btn_confir_pagar.setOnClickListener {
             val intent = Intent(this, FormPagamento::class.java)
@@ -31,13 +43,13 @@ class FormReserva : AppCompatActivity() {
 
         btn_chegada.setOnClickListener {
             val click = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
-                edit_chegada.setText( "" + dayOfMonth + "/" + month + "/" + year)
+                data_chegada_form.setText( "" + dayOfMonth + "/" + month + "/" + year)
             }, ano, mes, dia)
             click.show()
         }
         btn_partida.setOnClickListener {
             val click = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
-                edit_partida.setText( "" + dayOfMonth + "/" + month + "/" + year)
+                data_partida_form.setText( "" + dayOfMonth + "/" + month + "/" + year)
             }, ano, mes, dia)
             click.show()
         }

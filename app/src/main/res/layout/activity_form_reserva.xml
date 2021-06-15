@@ -71,35 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_nome" />
 
     <TextView
-        android:id="@+id/txt_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:text="e-mail"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_nome" />
-
-    <EditText
-        android:id="@+id/edit_nome2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/edit_text_login_cadastro"
-        android:hint="exemplo@mail.com"
-        android:inputType="none"
-        android:maxLines="1"
-        android:padding="19dp"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_email" />
-
-    <TextView
-        android:id="@+id/txt_acomodacao"
+        android:id="@+id/text_acomodacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -107,56 +79,83 @@
         android:text="Acomodação"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_nome2" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_nome" />
 
-    <Spinner
-        android:id="@+id/edit_acomodacao"
+    <EditText
+        android:id="@+id/form_acomodacao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/edit_text_login_cadastro"
-        android:hint="Apto com Sacada"
+        android:inputType="none"
+        android:maxLines="1"
+        android:text="Apartamento Standard"
+        android:padding="19dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_acomodacao" />
+
+    <TextView
+        android:id="@+id/text_tipo_quarto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Tipo de quarto"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/form_acomodacao" />
+
+    <TextView
+        android:id="@+id/form_tipo_de_quarto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edit_text_login_cadastro"
+        android:text="Quarto de casal modelo Europeu"
+        android:textColor="@color/black"
         android:inputType="none"
         android:maxLines="1"
         android:padding="20dp"
-        android:textColorHint="@color/azul_text"
         android:entries="@array/acomodacoes"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_acomodacao" />
+        app:layout_constraintTop_toBottomOf="@+id/text_tipo_quarto" />
 
     <TextView
-        android:id="@+id/txt_quarto"
+        android:id="@+id/text_qtd_hospedes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="Quarto"
+        android:text="Quantidade de hóspedes"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_acomodacao" />
+        app:layout_constraintTop_toBottomOf="@+id/form_tipo_de_quarto" />
 
-    <Spinner
-        android:id="@+id/edit_quarto"
+    <EditText
+        android:id="@+id/form_quantidade_hospedes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:textColorHint="@color/azul_text"
         android:layout_marginEnd="20dp"
         android:background="@drawable/edit_text_login_cadastro"
-        android:hint="Quarto de casal modelo Europeu"
-        android:inputType="none"
-        android:maxLines="1"
-        android:entries="@array/categoria_de_quartos"
+        android:inputType="number"
         android:padding="20dp"
-        android:textColor="@color/azul_text"
+        android:hint=""
+        android:maxLines="1"
+        android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_quarto" />
+        app:layout_constraintTop_toBottomOf="@+id/text_qtd_hospedes" />
 
     <TextView
         android:id="@+id/txt_chegada"
@@ -167,23 +166,23 @@
         android:text="Chegada"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_quarto" />
+        app:layout_constraintTop_toBottomOf="@+id/form_quantidade_hospedes" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_chegada"
         android:layout_width="170dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/fundo_branco_transparente"
-        app:layout_constraintBottom_toBottomOf="@+id/edit_chegada"
-        app:layout_constraintEnd_toEndOf="@+id/edit_chegada"
-        app:layout_constraintStart_toStartOf="@+id/edit_chegada"
-        app:layout_constraintTop_toTopOf="@+id/edit_chegada"
+        app:layout_constraintBottom_toBottomOf="@+id/data_chegada_form"
+        app:layout_constraintEnd_toEndOf="@+id/data_chegada_form"
+        app:layout_constraintStart_toStartOf="@+id/data_chegada_form"
+        app:layout_constraintTop_toTopOf="@+id/data_chegada_form"
         android:outlineProvider="none"
         />
 
 
     <TextView
-        android:id="@+id/edit_chegada"
+        android:id="@+id/data_chegada_form"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -204,8 +203,8 @@
         android:layout_height="60dp"
         android:backgroundTint="@color/fundo_branco_transparente"
         android:outlineProvider="none"
-        app:layout_constraintEnd_toEndOf="@+id/edit_partida"
-        app:layout_constraintTop_toTopOf="@+id/edit_partida" />
+        app:layout_constraintEnd_toEndOf="@+id/data_partida_form"
+        app:layout_constraintTop_toTopOf="@+id/data_partida_form" />
 
     <TextView
         android:id="@+id/txt_partida"
@@ -214,11 +213,11 @@
         android:layout_marginTop="10dp"
         android:text="Partida"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/edit_partida"
-        app:layout_constraintTop_toBottomOf="@+id/edit_quarto" />
+        app:layout_constraintStart_toStartOf="@+id/data_partida_form"
+        app:layout_constraintTop_toBottomOf="@+id/form_quantidade_hospedes" />
 
     <TextView
-        android:id="@+id/edit_partida"
+        android:id="@+id/data_partida_form"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
@@ -234,7 +233,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_partida" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/switch_cafe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -242,14 +241,26 @@
         android:text="Incluir café da manhã"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_chegada" />
+        app:layout_constraintTop_toBottomOf="@+id/data_chegada_form" />
 
+    <TextView
+        android:id="@+id/text_por_pessoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Valor da diária por pessoa:"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_cafe"
+        />
     <Button
         android:id="@+id/btn_confir_pagar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
         android:backgroundTint="@color/azul_text"
         android:text="Confirmar e pagar"
@@ -257,10 +268,10 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+        app:layout_constraintTop_toBottomOf="@+id/text_por_pessoa" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/valor_cafe_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -268,7 +279,18 @@
         android:text="+ R$ 20,00"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/switch1"
-        app:layout_constraintTop_toBottomOf="@+id/edit_partida" />
+        app:layout_constraintStart_toEndOf="@+id/switch_cafe"
+        app:layout_constraintTop_toBottomOf="@+id/data_partida_form" />
+    <TextView
+        android:id="@+id/valor_diaria_por_pessoa_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text=" R$ 200,00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/switch_cafe"
+        app:layout_constraintTop_toBottomOf="@+id/valor_cafe_form" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/imagem_quarto"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:background="@color/teal_200"
@@ -24,7 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image">
+        app:layout_constraintTop_toBottomOf="@+id/imagem_quarto">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/frameLayout2"
@@ -37,7 +37,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/titulo_quarto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -57,19 +57,19 @@
                 android:layout_marginTop="4dp"
                 android:src="@drawable/ic_estrela"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title" />
+                app:layout_constraintTop_toBottomOf="@+id/titulo_quarto" />
 
             <TextView
-                android:id="@+id/description"
+                android:id="@+id/comentarios"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" 4,93 (107 comentários)"
                 android:textSize="15sp"
                 app:layout_constraintStart_toEndOf="@+id/imageView2"
-                app:layout_constraintTop_toBottomOf="@+id/title" />
+                app:layout_constraintTop_toBottomOf="@+id/titulo_quarto" />
 
             <TextView
-                android:id="@+id/hospedes_anuncio"
+                android:id="@+id/qtd_hospedes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -79,10 +79,10 @@
                 android:textColor="@color/azul_text"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/description" />
+                app:layout_constraintTop_toBottomOf="@+id/comentarios" />
 
             <TextView
-                android:id="@+id/qtd_quarto"
+                android:id="@+id/qtd_cama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -91,7 +91,7 @@
                 android:textColor="@color/azul_text"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hospedes_anuncio" />
+                app:layout_constraintTop_toBottomOf="@+id/qtd_hospedes" />
 
             <TextView
                 android:id="@+id/valor_anuncio"
@@ -104,7 +104,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/qtd_quarto" />
+                app:layout_constraintTop_toBottomOf="@+id/qtd_cama" />
 
             <ImageView
                 android:layout_width="110dp"

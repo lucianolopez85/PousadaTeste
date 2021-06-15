@@ -1,45 +1,107 @@
 package com.example.pousadateste
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.AdapterView
-import android.widget.ListView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
 import com.example.pousadateste.adapter.MyAdapter
+import com.example.pousadateste.model.Data
 
 class QuartoStandard : AppCompatActivity() {
+
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var arrayList: ArrayList<Data>
+    lateinit var listaDeImagensQuarto: Array<Int>
+    lateinit var listaTituloQuarto: Array<String>
+    lateinit var listaDeComentariosQuarto: Array<String>
+    lateinit var listaDeQtdeHospedesQuarto: Array<String>
+    lateinit var listaDeQtdeCamaQuarto: Array<String>
+    lateinit var listaValorQuarto: Array<String>
+    lateinit var listaValorQuartoPorPessoa: ArrayList<String>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_view_quarto)
+        setContentView(R.layout.activity_recycler_view_quarto)
 
-        var listViewCreated = findViewById<ListView>(R.id.list_view)
-        var list = mutableListOf<Model>()
-        list.add(Model( "Quarto de casal Europeu", "4,93 (107 comentários)", R.drawable.quarto_casal_modelo_europeu))
-        list.add(Model("Quarto de casal", "4,91 (87 comentários)", R.drawable.quarto_casal))
-        list.add(Model("Quarto de solteiro triplo", "4,94 (56 comentários)", R.drawable.quarto_triplo))
-        list.add(Model("Quarto de solteiro duplo", "4,88 (47 comentários)", R.drawable.quarto_solteiro_duplo))
+        listaDeImagensQuarto = arrayOf(
+            R.drawable.quarto_casal_modelo_europeu,
+            R.drawable.quarto_casal,
+            R.drawable.quarto_solteiro_triplo,
+            R.drawable.quarto_solteiro_duplo
+        )
+        listaTituloQuarto = arrayOf(
+            "Quarto de casal Europeu",
+            "Quarto de casal",
+            "Quarto de solteiro triplo",
+            "Quarto de solteiro duplo"
+        )
+        listaDeComentariosQuarto = arrayOf(
+            "4,93 (107 comentários)",
+            "4,91 (87 comentários)",
+            "4,94 (56 comentários)",
+            "4,88 (47 comentários)"
+        )
+        listaDeQtdeHospedesQuarto = arrayOf(
+            "Diária para 2 hóspedes",
+            "Diária para 2 hóspedes",
+            "Diária para 3 hóspedes",
+            "Diária para 2 hóspedes"
+        )
+        listaDeQtdeCamaQuarto = arrayOf(
+            "1 quarto - 1 cama - 1 banheiro",
+            "1 quarto - 1 cama - 1 banheiro",
+            "1 quarto - 3 camas - 1 banheiro",
+            "1 quarto - 2 camas - 1 banheiro"
+        )
+        listaValorQuarto = arrayOf(
+            "R$ 520/noite",
+            "R$ 480/noite",
+            "R$ 450/noite",
+            "R$ 300/noite"
+        )
+        listaValorQuartoPorPessoa = arrayListOf(
+            "260.00",
+            "240.00",
+            "150.00",
+            "150.00"
+        )
 
+        recyclerView = findViewById(R.id.recycler_view_lista_quarto)
+        arrayList = arrayListOf()
 
-        listViewCreated.adapter = MyAdapter(this, R.layout.activity_item_publicacao, list)
+        getUserdata()
+    }
+    private fun getUserdata() {
+        for (i in listaDeImagensQuarto.indices) {
+            val listas = Data(
+                listaDeImagensQuarto[i],
+                listaTituloQuarto[i],
+                listaDeComentariosQuarto[i],
+                listaDeQtdeHospedesQuarto[i],
+                listaDeQtdeCamaQuarto[i],
+                listaValorQuarto[i],
+                listaValorQuartoPorPessoa[i]
+            )
+            arrayList.add(listas)
+        }
 
-        listViewCreated.setOnItemClickListener { parent: AdapterView<*>, view: View, position: Int, id:Long ->
-            if (position == 0){
-                val intent = Intent(this,FormReserva::class.java)
+        val adapter = MyAdapter(arrayList)
+        recyclerView.adapter = adapter
+
+        adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener {
+            override fun onItemClick(position: Int) {
+//                Toast.makeText(this@QuartoStandard,"testando ${position}", Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(this@QuartoStandard, FormReserva::class.java )
+                intent.putExtra("listaQuarto", arrayList[position].titulo)
+                intent.putExtra("listaValorPorPessoa", arrayList[position].valorUnitario)
+//                intent.putExtra("listImageId",arrayList[position].image)
+
                 startActivity(intent)
             }
-            if (position == 1){
-                Toast.makeText(this, "teste", Toast.LENGTH_LONG).show()
-            }
-            if (position == 2){
-                Toast.makeText(this, "teste", Toast.LENGTH_LONG).show()
-            }
-            if (position == 3){
-                Toast.makeText(this, "teste", Toast.LENGTH_LONG).show()
-            }
-
-
-        }
+        })
     }
 }
+
+

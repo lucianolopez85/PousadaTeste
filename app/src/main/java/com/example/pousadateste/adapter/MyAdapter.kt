@@ -1,35 +1,63 @@
 package com.example.pousadateste.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.pousadateste.Model
+import androidx.recyclerview.widget.RecyclerView
 import com.example.pousadateste.R
+import com.example.pousadateste.model.Data
+
 
 class MyAdapter(
-    var mCtx: Context,
-    var resource: Int,
-    var items:List<Model>
-): ArrayAdapter<Model>(mCtx, resource, items) {
+    private val arrayListData: ArrayList<Data>
+) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val layoutInflater:LayoutInflater = LayoutInflater.from(mCtx)
-        val view:View = layoutInflater.inflate(resource, null)
+    private lateinit var myListener: onItemClickListener
 
-        val imageView:ImageView = view.findViewById(R.id.image)
-        val titleTextView:TextView = view.findViewById(R.id.title)
-        val descriptionTextView:TextView = view.findViewById((R.id.description))
+    interface onItemClickListener {
+        fun onItemClick(position: Int)
+    }
 
+    fun setOnItemClickListener(listener: onItemClickListener) {
+        myListener = listener
+    }
 
-        var mItem: Model = items[position]
-        imageView.setImageDrawable(mCtx.resources.getDrawable(mItem.img))
-        titleTextView.text = mItem.title
-        descriptionTextView.text = mItem.description
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+        val itemView = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_publicacao_quarto, parent, false)
+        return MyViewHolder(itemView, myListener)
+    }
 
-        return view
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        val data = arrayListData[position]
+        holder.imagemView.setImageResource(data.imagem)
+        holder.tituloView.text = data.titulo
+        holder.comentariosView.text = data.comentario
+        holder.hospedesView.text = data.qtdHospede
+        holder.qtdeCamaView.text = data.qtdCama
+        holder.valorView.text = data.valor
+    }
+
+    override fun getItemCount(): Int {
+        return arrayListData.size
+    }
+
+    class MyViewHolder(itemView: View, listener: onItemClickListener) :
+        RecyclerView.ViewHolder(itemView) {
+        val imagemView: ImageView = itemView.findViewById(R.id.imagem_quarto)
+        val tituloView: TextView = itemView.findViewById(R.id.titulo_quarto)
+        val comentariosView: TextView = itemView.findViewById(R.id.comentarios)
+        val hospedesView: TextView = itemView.findViewById(R.id.qtd_hospedes)
+        val qtdeCamaView: TextView = itemView.findViewById(R.id.qtd_cama)
+        val valorView: TextView = itemView.findViewById(R.id.valor_anuncio)
+
+        init {
+            itemView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
+            }
+        }
+
     }
 }

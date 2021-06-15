@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pousadateste.R
-import kotlinx.android.synthetic.main.activity_item_publicacao.view.*
+import kotlinx.android.synthetic.main.item_publicacao_quarto.view.*
 import kotlinx.android.synthetic.main.item_evento_social.view.*
 
 

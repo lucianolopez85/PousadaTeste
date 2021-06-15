@@ -5,6 +5,3 @@ class Model(
     val description: String,
     val img: Int,
 )
-class ModelImg(
-    val img: Int
-)
