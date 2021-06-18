@@ -1,4 +1,4 @@
-package com.example.pousadateste
+package com.example.pousadateste.ui
 
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import androidx.annotation.RequiresApi
+import com.example.pousadateste.R
 import kotlinx.android.synthetic.main.activity_form_reserva.*
 import java.util.*
 

@@ -2,21 +2,32 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pousadateste">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PousadaTeste">
-        <activity android:name=".EventoSocial"></activity>
-        <activity android:name=".Lazer" />
-        <activity android:name=".FormPagamento" />
-        <activity android:name=".FormReserva" />
-        <activity android:name=".QuartoStandard" />
-        <activity android:name=".CategoriaAcomodacoes" />
-        <activity android:name=".MenuPrincipal" />
-        <activity android:name=".LayoutEntrada">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"/>
+
+        <activity android:name=".ui.Maps"></activity>
+        <activity android:name=".ui.EventoSocial" />
+        <activity android:name=".ui.Lazer" />
+        <activity android:name=".ui.FormPagamento" />
+        <activity android:name=".ui.FormReserva" />
+        <activity android:name=".ui.QuartoStandard" />
+        <activity android:name=".ui.CategoriaAcomodacoes" />
+        <activity android:name=".ui.MenuPrincipal" />
+        <activity android:name=".ui.FormCadastro" />
+        <activity android:name=".ui.FormLogin" />
+        <activity android:name=".ui.LayoutEntrada">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,10 +1,10 @@
-package com.example.pousadateste
+package com.example.pousadateste.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pousadateste.R
 import com.example.pousadateste.adapter.MyAdapter
 import com.example.pousadateste.model.Data
 

@@ -1,12 +1,10 @@
-package com.example.pousadateste
+package com.example.pousadateste.ui
 
-import android.annotation.SuppressLint
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.OrientationHelper
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pousadateste.R
 import com.example.pousadateste.adapter.PostsAdapter
 import com.example.pousadateste.adapter.PostsAdapter2
 import kotlinx.android.synthetic.main.activity_evento_social.*

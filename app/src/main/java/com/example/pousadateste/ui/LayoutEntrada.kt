@@ -1,10 +1,11 @@
-package com.example.pousadateste
+package com.example.pousadateste.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.example.pousadateste.R
 
 class LayoutEntrada : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +17,7 @@ class LayoutEntrada : AppCompatActivity() {
         }, 2000)
     }
     private fun AbrirTelaLogin(){
-        val intent = Intent(this, MenuPrincipal::class.java)
+        val intent = Intent(this, FormLogin::class.java)
         startActivity(intent)
         finish()
     }

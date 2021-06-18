@@ -1,11 +1,10 @@
-package com.example.pousadateste
+package com.example.pousadateste.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.pousadateste.R
 import kotlinx.android.synthetic.main.activity_form_pagamento.*
-import kotlinx.android.synthetic.main.activity_form_reserva.*
-import kotlinx.android.synthetic.main.activity_menu_principal.*
 
 class FormPagamento : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

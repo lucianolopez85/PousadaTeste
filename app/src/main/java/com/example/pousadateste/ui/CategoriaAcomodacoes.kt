@@ -1,8 +1,9 @@
-package com.example.pousadateste
+package com.example.pousadateste.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.pousadateste.R
 import kotlinx.android.synthetic.main.activity_categoria_acomodacoes.*
 
 class CategoriaAcomodacoes : AppCompatActivity() {

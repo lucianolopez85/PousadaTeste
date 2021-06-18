@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuPrincipal">
+    tools:context=".ui.MenuPrincipal">
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -25,6 +25,21 @@
             android:text="Pousada"
             android:textColor="@color/white"
             android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/exit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="260dp"
+            android:src="@drawable/ic_exit" />
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="220dp"
+            android:src="@drawable/ic_location" />
     </FrameLayout>
 
     <ImageView
