@@ -43,8 +43,8 @@ class Maps : AppCompatActivity(),
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
         createMarke()
-//        map.setOnMyLocationButtonClickListener(this)
-//        map.setOnMyLocationClickListener(this)
+        map.setOnMyLocationButtonClickListener(this)
+        map.setOnMyLocationClickListener(this)
         enableLocation()
     }
 

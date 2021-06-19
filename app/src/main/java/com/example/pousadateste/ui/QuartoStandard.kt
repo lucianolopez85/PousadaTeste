@@ -15,7 +15,7 @@ class QuartoStandard : AppCompatActivity() {
     lateinit var listaDeImagensQuarto: Array<Int>
     lateinit var listaTituloQuarto: Array<String>
     lateinit var listaDeComentariosQuarto: Array<String>
-    lateinit var listaDeQtdeHospedesQuarto: Array<String>
+    lateinit var listaDeQtdeHospedesQuarto: Array<Int>
     lateinit var listaDeQtdeCamaQuarto: Array<String>
     lateinit var listaValorQuarto: Array<String>
     lateinit var listaValorQuartoPorPessoa: ArrayList<String>
@@ -43,10 +43,10 @@ class QuartoStandard : AppCompatActivity() {
             "4,88 (47 comentários)"
         )
         listaDeQtdeHospedesQuarto = arrayOf(
-            "Diária para 2 hóspedes",
-            "Diária para 2 hóspedes",
-            "Diária para 3 hóspedes",
-            "Diária para 2 hóspedes"
+            2,
+            2,
+            3,
+            2
         )
         listaDeQtdeCamaQuarto = arrayOf(
             "1 quarto - 1 cama - 1 banheiro",
@@ -96,6 +96,7 @@ class QuartoStandard : AppCompatActivity() {
                 val intent = Intent(this@QuartoStandard, FormReserva::class.java )
                 intent.putExtra("listaQuarto", arrayList[position].titulo)
                 intent.putExtra("listaValorPorPessoa", arrayList[position].valorUnitario)
+                intent.putExtra("listaQtdHospedes", arrayList[position].qtdHospede)
 //                intent.putExtra("listImageId",arrayList[position].image)
 
                 startActivity(intent)

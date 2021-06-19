@@ -35,7 +35,7 @@ class MyAdapter(
         holder.imagemView.setImageResource(data.imagem)
         holder.tituloView.text = data.titulo
         holder.comentariosView.text = data.comentario
-        holder.hospedesView.text = data.qtdHospede
+        holder.hospedesView.text = data.qtdHospede.toString()
         holder.qtdeCamaView.text = data.qtdCama
         holder.valorView.text = data.valor
     }

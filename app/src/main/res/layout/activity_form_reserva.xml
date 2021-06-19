@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
     <EditText
-        android:id="@+id/edit_nome"
+        android:id="@+id/edit_nome_reserva"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -79,7 +79,7 @@
         android:text="Acomodação"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_nome" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_nome_reserva" />
 
     <EditText
         android:id="@+id/form_acomodacao"
@@ -140,7 +140,7 @@
         app:layout_constraintTop_toBottomOf="@+id/form_tipo_de_quarto" />
 
     <EditText
-        android:id="@+id/form_quantidade_hospedes"
+        android:id="@+id/edit_quantidade_hospedes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -166,28 +166,27 @@
         android:text="Chegada"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/form_quantidade_hospedes" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_quantidade_hospedes" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_chegada"
         android:layout_width="170dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/fundo_branco_transparente"
-        app:layout_constraintBottom_toBottomOf="@+id/data_chegada_form"
-        app:layout_constraintEnd_toEndOf="@+id/data_chegada_form"
-        app:layout_constraintStart_toStartOf="@+id/data_chegada_form"
-        app:layout_constraintTop_toTopOf="@+id/data_chegada_form"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_data_chegada"
+        app:layout_constraintEnd_toEndOf="@+id/edit_data_chegada"
+        app:layout_constraintStart_toStartOf="@+id/edit_data_chegada"
+        app:layout_constraintTop_toTopOf="@+id/edit_data_chegada"
         android:outlineProvider="none"
         />
 
 
     <TextView
-        android:id="@+id/data_chegada_form"
+        android:id="@+id/edit_data_chegada"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:background="@drawable/edit_text_login_cadastro"
-        android:hint="00/00/00"
         android:inputType="date"
         android:maxLines="1"
         android:padding="19dp"
@@ -203,8 +202,8 @@
         android:layout_height="60dp"
         android:backgroundTint="@color/fundo_branco_transparente"
         android:outlineProvider="none"
-        app:layout_constraintEnd_toEndOf="@+id/data_partida_form"
-        app:layout_constraintTop_toTopOf="@+id/data_partida_form" />
+        app:layout_constraintEnd_toEndOf="@+id/edit_data_partida"
+        app:layout_constraintTop_toTopOf="@+id/edit_data_partida" />
 
     <TextView
         android:id="@+id/txt_partida"
@@ -213,16 +212,15 @@
         android:layout_marginTop="10dp"
         android:text="Partida"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/data_partida_form"
-        app:layout_constraintTop_toBottomOf="@+id/form_quantidade_hospedes" />
+        app:layout_constraintStart_toStartOf="@+id/edit_data_partida"
+        app:layout_constraintTop_toBottomOf="@+id/edit_quantidade_hospedes" />
 
     <TextView
-        android:id="@+id/data_partida_form"
+        android:id="@+id/edit_data_partida"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:background="@drawable/edit_text_login_cadastro"
-        android:hint="00/00/00"
         android:inputType="date"
         android:maxLines="1"
         android:padding="19dp"
@@ -241,7 +239,7 @@
         android:text="Incluir café da manhã"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/data_chegada_form" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_data_chegada" />
 
     <TextView
         android:id="@+id/text_por_pessoa"
@@ -250,11 +248,11 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:text="Valor da diária por pessoa:"
-        android:textSize="18sp"
         android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch_cafe"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/switch_cafe" />
+
     <Button
         android:id="@+id/btn_confir_pagar"
         android:layout_width="match_parent"
@@ -280,7 +278,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/switch_cafe"
-        app:layout_constraintTop_toBottomOf="@+id/data_partida_form" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_data_partida" />
     <TextView
         android:id="@+id/valor_diaria_por_pessoa_form"
         android:layout_width="wrap_content"
