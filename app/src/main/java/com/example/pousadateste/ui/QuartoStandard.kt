@@ -31,7 +31,7 @@ class QuartoStandard : AppCompatActivity() {
             R.drawable.quarto_solteiro_duplo
         )
         listaTituloQuarto = arrayOf(
-            "Quarto de casal Europeu",
+            "Quarto de casal Modelo Europeu",
             "Quarto de casal",
             "Quarto de solteiro triplo",
             "Quarto de solteiro duplo"
@@ -97,7 +97,7 @@ class QuartoStandard : AppCompatActivity() {
                 intent.putExtra("listaQuarto", arrayList[position].titulo)
                 intent.putExtra("listaValorPorPessoa", arrayList[position].valorUnitario)
                 intent.putExtra("listaQtdHospedes", arrayList[position].qtdHospede)
-//                intent.putExtra("listImageId",arrayList[position].image)
+                intent.putExtra("listImagem",arrayList[position].imagem)
 
                 startActivity(intent)
             }

@@ -60,121 +60,32 @@
         android:layout_height="match_parent"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginTop="95dp"
         >
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="85dp"
-            android:text="Numero do cartão"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/editText"
+        <ImageView
+            android:id="@+id/pag_imagem"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_login_cadastro"
-            android:hint=""
-            android:inputType="number"
-            android:maxLines="1"
-            android:padding="19dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/azul_text"
-            android:textSize="18sp"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Nome do cartão"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-        <EditText
-            android:id="@+id/form_acomodacao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_login_cadastro"
-            android:hint=""
-            android:inputType="number"
-            android:maxLines="1"
-            android:padding="19dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/azul_text"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Data de expiração"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/form_acomodacao" />
-
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_login_cadastro"
-            android:hint=""
-            android:inputType="date"
-            android:maxLines="1"
-            android:padding="19dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/azul_text"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Código de segurança (CVV)"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText2" />
-
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_login_cadastro"
-            android:hint=""
-            android:inputType="number"
-            android:maxLines="1"
-            android:padding="19dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/azul_text"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <TextView
             android:id="@+id/resumo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="Resumo da compra"
             android:textColor="@color/azul_text"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText3" />
+            app:layout_constraintTop_toBottomOf="@+id/pag_imagem" />
 
         <TextView
             android:id="@+id/textView9"
@@ -188,7 +99,7 @@
             app:layout_constraintTop_toBottomOf="@+id/resumo" />
 
         <TextView
-            android:id="@+id/tipo_quarto_pag"
+            android:id="@+id/pag_tipo_quarto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Quarto de casal modelo Europeu"
@@ -198,14 +109,25 @@
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
         <TextView
-            android:id="@+id/qtd_hospede_pag"
+            android:id="@+id/txt_qtd_hospede_pag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Diária para 2 hóspedes"
+            android:text="Quantidade de hóspedes: "
             android:textColor="@color/azul_text"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tipo_quarto_pag" />
+            app:layout_constraintTop_toBottomOf="@+id/pag_tipo_quarto" />
+
+        <TextView
+            android:id="@+id/pag_qtd_hospede"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="@color/azul_text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/txt_qtd_hospede_pag"
+            app:layout_constraintTop_toBottomOf="@+id/pag_tipo_quarto" />
+
         <TextView
             android:id="@+id/text_cafe_pag"
             android:layout_width="wrap_content"
@@ -214,17 +136,17 @@
             android:textColor="@color/azul_text"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/qtd_hospede_pag" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_qtd_hospede_pag" />
 
         <TextView
-            android:id="@+id/pag_valor_cafe"
+            android:id="@+id/pag_incluso_cafe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="incluso"
+            android:text="Não"
             android:textColor="@color/azul_text"
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/text_cafe_pag"
-            app:layout_constraintTop_toBottomOf="@+id/qtd_hospede_pag" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_qtd_hospede_pag" />
 
         <TextView
             android:id="@+id/text_chegada_pag"
@@ -272,30 +194,73 @@
             android:id="@+id/text_valor_pag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Valor: "
+            android:text="Valor total da diária: R$ "
             android:textColor="@color/azul_text"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_partida_pag" />
+            app:layout_constraintTop_toBottomOf="@+id/text_valor_cafe" />
+
+
         <TextView
             android:id="@+id/pag_valor_diaria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="R$ 150.00"
             android:inputType="number"
+            android:text="150.00"
             android:textColor="@color/azul_text"
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/text_valor_pag"
+            app:layout_constraintTop_toTopOf="@+id/text_valor_pag" />
+
+        <TextView
+            android:id="@+id/text_valor_hospedes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valor por hóspede: R$ "
+            android:textColor="@color/azul_text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_partida_pag" />
+
+        <TextView
+            android:id="@+id/pag_valor_hospedes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="150.00"
+            android:textColor="@color/azul_text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/text_valor_hospedes"
+            app:layout_constraintTop_toBottomOf="@+id/text_partida_pag" />
+
+        <TextView
+            android:id="@+id/text_valor_cafe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valor do café: R$ "
+            android:textColor="@color/azul_text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_valor_hospedes" />
+
+
+        <TextView
+            android:id="@+id/pag_valor_cafe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="0.0"
+            android:textColor="@color/azul_text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/text_valor_cafe"
+            app:layout_constraintTop_toTopOf="@+id/text_valor_cafe" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="80dp"
-            android:layout_height="60dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="30dp"
             android:src="@drawable/img_bandeira_cartao"
             app:layout_constraintBottom_toTopOf="@+id/pagar"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -304,13 +269,14 @@
             android:id="@+id/pagar"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="16dp"
             android:backgroundTint="@color/azul_text"
             android:text="Pagar"
             android:textAllCaps="false"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_valor_pag" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
