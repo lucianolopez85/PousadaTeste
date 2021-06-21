@@ -10,11 +10,9 @@ import android.widget.*
 import androidx.annotation.RequiresApi
 import com.example.pousadateste.R
 import kotlinx.android.synthetic.main.activity_form_reserva.*
-import kotlinx.android.synthetic.main.item_publicacao_quarto.*
 import java.util.*
 
 class FormReserva : AppCompatActivity() {
-
 
     @RequiresApi(Build.VERSION_CODES.N)
 
@@ -51,7 +49,7 @@ class FormReserva : AppCompatActivity() {
         val bundle: Bundle? = intent.extras
         val quarto = bundle!!.getString("listaQuarto")
         val valorPorPessoa = bundle.getString("listaValorPorPessoa")
-        val quantidadeHospedes = bundle.getInt("listaQtdHospedes")
+        val quantidadeHospedesLimite = bundle.getString("listaQtdHospedes")
         val imagem = bundle.getInt("listImagem")
 
         quartoView.text = quarto
@@ -63,7 +61,6 @@ class FormReserva : AppCompatActivity() {
             val dataChegada = edit_data_chegada.text.toString()
             val dataPartida = edit_data_partida.text.toString()
 
-//   ####### PARA TESTES ############
             val intent = Intent(this, FormPagamento::class.java)
             intent.putExtra("imagem", imagem)
             intent.putExtra("tipoQuarto", quarto)
@@ -71,18 +68,14 @@ class FormReserva : AppCompatActivity() {
             intent.putExtra("quantidadeHospedes", qtdHospedes)
             intent.putExtra("dataChegada", dataChegada)
             intent.putExtra("dataPartida", dataPartida)
-            startActivity(intent)
 
-//            Log.d("***quantidadeHospedes", quantidadeHospedes.toString())
-//            Log.d("***qtdHospedes", qtdHospedes)
-
-//            if (nomeUsuario.isEmpty() || qtdHospedes.isEmpty() || dataChegada.isEmpty() || dataPartida.isEmpty() ){
-//                Toast.makeText(this, "Favor preencher todos os campos!", Toast.LENGTH_SHORT).show()
-//            }else if (quantidadeHospedes < qtdHospedes.toInt() ){
-//                Toast.makeText(this, "Limite máximo de ${quantidadeHospedes} hospedes", Toast.LENGTH_SHORT).show()
-//            }else{
-//                startActivity(intent)
-//            }
+            if (nomeUsuario.isEmpty() || qtdHospedes.isEmpty() || dataChegada.isEmpty() || dataPartida.isEmpty() ){
+                Toast.makeText(this, "Favor preencher todos os campos!", Toast.LENGTH_SHORT).show()
+            }else if (quantidadeHospedesLimite.toString().toInt() < qtdHospedes.toInt() ){
+                Toast.makeText(this, "Limite máximo de ${quantidadeHospedesLimite} hospedes", Toast.LENGTH_SHORT).show()
+            }else{
+                startActivity(intent)
+            }
         }
     }
 

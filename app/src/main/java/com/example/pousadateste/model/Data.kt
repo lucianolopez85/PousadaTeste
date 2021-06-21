@@ -4,7 +4,7 @@ class Data (
     val imagem: Int,
     val titulo: String,
     val comentario: String,
-    val qtdHospede: Int,
+    val qtdHospede: String,
     val qtdCama: String,
     val valor: String,
     val valorUnitario: String,

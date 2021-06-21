@@ -1,16 +1,20 @@
 package com.example.pousadateste.ui
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
+import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pousadateste.R
 import kotlinx.android.synthetic.main.activity_form_pagamento.*
-import java.time.Month
+import kotlinx.android.synthetic.main.pagamento.*
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 
 class FormPagamento : AppCompatActivity() {
@@ -34,16 +38,18 @@ class FormPagamento : AppCompatActivity() {
         val bundle: Bundle? = intent.extras
         val quarto = bundle!!.getString("tipoQuarto")
         val valorPorPessoa = bundle.getString("valorPorPessoa")
-        val quantidadeHospedes = bundle.getInt("quantidadeHospedes")
+        val quantidadeHospedes = bundle.getString("quantidadeHospedes")
         val imagem = bundle.getInt("imagem")
         val dataChegada = bundle.getString("dataChegada")
         val dataPartida = bundle.getString("dataPartida")
 
-
-        Log.d("***dataChegada_PAG", dataChegada.toString())
+        val formato = DateTimeFormatter.ofPattern("d/M/yyyy");
+        val dataInicial = LocalDate.parse(dataChegada, formato)
+        val dataFinal = LocalDate.parse(dataPartida, formato)
+        val diferencaDias = ChronoUnit.DAYS.between(dataInicial, dataFinal).toInt()
 
         if (quantidadeHospedes!=null){
-            valorTotal = (quantidadeHospedes*valorPorPessoa.toString().toDouble())+valorCafe
+            valorTotal = (diferencaDias*quantidadeHospedes.toString().toDouble()*valorPorPessoa.toString().toDouble())+valorCafe
         }
 
         imagemView.setImageResource(imagem)
@@ -55,14 +61,17 @@ class FormPagamento : AppCompatActivity() {
         dataChegadaView.text = dataChegada.toString()
         dataPartidaView.text = dataPartida.toString()
 
-        irParaMenuPrincipal()
+        irParaDialogPagamento()
+
     }
 
-    private fun irParaMenuPrincipal() {
+    private fun irParaDialogPagamento() {
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.pagamento, null)
+        val builder = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .setTitle("Pagamento com cartão de crédito")
         pagar.setOnClickListener {
-            val intent = Intent(this, MenuPrincipal::class.java)
-            startActivity(intent)
+            builder.show()
         }
     }
 }
-

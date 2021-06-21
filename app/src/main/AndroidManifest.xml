@@ -23,11 +23,11 @@
         <activity android:name=".ui.FormPagamento" />
         <activity android:name=".ui.FormReserva" />
         <activity android:name=".ui.QuartoStandard" />
-        <activity android:name=".ui.CategoriaAcomodacoes" >
-<!--        <activity android:name=".ui.MenuPrincipal" />-->
-<!--        <activity android:name=".ui.FormCadastro" />-->
-<!--        <activity android:name=".ui.FormLogin" />-->
-<!--        <activity android:name=".ui.LayoutEntrada">-->
+        <activity android:name=".ui.CategoriaAcomodacoes" />
+        <activity android:name=".ui.MenuPrincipal" />
+        <activity android:name=".ui.FormCadastro" />
+        <activity android:name=".ui.FormLogin" />
+        <activity android:name=".ui.LayoutEntrada">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

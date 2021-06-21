@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">PousadaTeste</string>
+    <string name="app_name">Pousada</string>
+    <string name="nome">Nome</string>
+    <string name="cartao">Número do cartão</string>
+    <string name="data">Data de validade</string>
+    <string name="codigo">Cód de segurança</string>
+    <string name="vezes">Parcelamento</string>
+    <string name="pagar">Confirmar Pagamento</string>
+
 </resources>

@@ -15,7 +15,7 @@ class QuartoStandard : AppCompatActivity() {
     lateinit var listaDeImagensQuarto: Array<Int>
     lateinit var listaTituloQuarto: Array<String>
     lateinit var listaDeComentariosQuarto: Array<String>
-    lateinit var listaDeQtdeHospedesQuarto: Array<Int>
+    lateinit var listaDeQtdeHospedesQuarto: Array<String>
     lateinit var listaDeQtdeCamaQuarto: Array<String>
     lateinit var listaValorQuarto: Array<String>
     lateinit var listaValorQuartoPorPessoa: ArrayList<String>
@@ -43,10 +43,10 @@ class QuartoStandard : AppCompatActivity() {
             "4,88 (47 comentários)"
         )
         listaDeQtdeHospedesQuarto = arrayOf(
-            2,
-            2,
-            3,
-            2
+            "2",
+            "2",
+            "3",
+            "2"
         )
         listaDeQtdeCamaQuarto = arrayOf(
             "1 quarto - 1 cama - 1 banheiro",
@@ -61,10 +61,10 @@ class QuartoStandard : AppCompatActivity() {
             "R$ 300/noite"
         )
         listaValorQuartoPorPessoa = arrayListOf(
-            "260.00",
-            "240.00",
-            "150.00",
-            "150.00"
+            "260.0",
+            "240.0",
+            "150.0",
+            "150.0"
         )
 
         recyclerView = findViewById(R.id.recycler_view_lista_quarto)

@@ -181,7 +181,7 @@
         />
 
 
-    <TextView
+    <EditText
         android:id="@+id/edit_data_chegada"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
@@ -215,7 +215,7 @@
         app:layout_constraintStart_toStartOf="@+id/edit_data_partida"
         app:layout_constraintTop_toBottomOf="@+id/edit_quantidade_hospedes" />
 
-    <TextView
+    <EditText
         android:id="@+id/edit_data_partida"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
